@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c3cmpi8tbtl81"]
 
+[ext_resource type="Script" path="res://Scripts/main_character.gd" id="1_ava4r"]
 [ext_resource type="Texture2D" uid="uid://8ql08mm615dt" path="res://Sprites/RABIT.png" id="1_lbmog"]
-[ext_resource type="Script" path="res://Scenes/main_character.gd" id="1_py8o5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_erbj5"]
 radius = 5.0
@@ -9,7 +9,7 @@ height = 26.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(579, 352)
-script = ExtResource("1_py8o5")
+script = ExtResource("1_ava4r")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -18,3 +18,9 @@ texture = ExtResource("1_lbmog")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 3)
 shape = SubResource("CapsuleShape2D_erbj5")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_top = 0
+limit_bottom = 182
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
